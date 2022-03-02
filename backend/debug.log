@@ -1,0 +1,1539 @@
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:04:25.254Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:04:26.078Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:41:58.961Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:41:59.833Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:42:54.380Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:42:55.201Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:44:42.411Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:44:43.189Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:44:51.904Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:44:52.824Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:45:03 +0000] "POST /api/v1/auth/register HTTP/1.1" 500 1198 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:45:03.702Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:47:14.233Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:47:15.218Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:47:15 +0000] "POST /api/v1/auth/register HTTP/1.1" 500 1198 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:47:15.903Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:47:47.214Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:47:48.044Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:47:48 +0000] "POST /api/v1/auth/register HTTP/1.1" 500 1304 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:47:48.473Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:48:02.738Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:48:03.509Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:48:03 +0000] "POST /api/v1/auth/register HTTP/1.1" 500 1302 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:48:03.876Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:49:45.196Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:49:46.068Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:49:52.603Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:49:53.401Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:49:58.066Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:49:58.871Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:49:59 +0000] "POST /api/v1/auth/register HTTP/1.1" 500 1296 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:49:59.714Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:51:24.654Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:51:25.472Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:51:29 +0000] "POST /api/v1/auth/register HTTP/1.1" 500 1296 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:51:29.430Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:51:45.281Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:51:46.375Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:51:51 +0000] "POST /api/v1/auth/register HTTP/1.1" 500 1302 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:51:51.253Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:54:01.577Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:54:02.457Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:54:05 +0000] "POST /api/v1/auth/register HTTP/1.1" 500 1304 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:54:05.882Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:54:54.942Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:54:55.877Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:55:40.449Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:55:41.298Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:55:47 +0000] "POST /auth/register HTTP/1.1" 500 57 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:55:47.392Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:56:21.183Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:56:22.098Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T09:57:14.801Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T09:57:15.641Z'
+}
+{
+  message: { email: 'kunal@acquire.io', username: 'Kunal' },
+  level: 'debug',
+  timestamp: '2022-02-27T09:57:17.929Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:57:17 +0000] "POST /auth/register HTTP/1.1" 200 91 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:57:17.934Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:57:38 +0000] "POST /auth/login HTTP/1.1" 500 65 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:57:38.025Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T09:58:11.404Z'
+}
+{
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '../certs/private.pem',
+  level: 'error',
+  timestamp: '2022-02-27T09:58:11.405Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:58:11 +0000] "POST /auth/login HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:58:11.415Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T09:58:18.877Z'
+}
+{
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '../certs/private.pem',
+  level: 'error',
+  timestamp: '2022-02-27T09:58:18.877Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:09:58:18 +0000] "POST /auth/login HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T09:58:18.879Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:00:17.862Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:00:18.769Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T10:00:21.520Z'
+}
+{
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '../certs/private.pem',
+  level: 'error',
+  timestamp: '2022-02-27T10:00:21.520Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:00:21 +0000] "POST /auth/login HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:00:21.525Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:01:10.037Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:01:10.935Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T10:01:12.680Z'
+}
+{
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '../certs/private.pem',
+  level: 'error',
+  timestamp: '2022-02-27T10:01:12.681Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:01:12 +0000] "POST /auth/login HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:01:12.698Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:01:24.241Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:01:25.214Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T10:01:27.757Z'
+}
+{
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '../certs/private.pem',
+  level: 'error',
+  timestamp: '2022-02-27T10:01:27.758Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:01:27 +0000] "POST /auth/login HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:01:27.772Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:02:33.923Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:02:35.066Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T10:02:36.412Z'
+}
+{
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/home/acq052/Documents/Others/New/Onquity/backend/src/controllers/src/certs/private.pem',
+  level: 'error',
+  timestamp: '2022-02-27T10:02:36.413Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:02:36 +0000] "POST /auth/login HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:02:36.427Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:03:03.406Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:03:04.300Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T10:03:05.856Z'
+}
+{
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/home/acq052/Documents/Others/New/Onquity/backend/src/controllers/src/certs/private.pem',
+  level: 'error',
+  timestamp: '2022-02-27T10:03:05.857Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:03:05 +0000] "POST /auth/login HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:03:05.876Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:03:39.414Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:03:40.269Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T10:03:42.350Z'
+}
+{
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/home/acq052/Documents/Others/New/Onquity/backend/src/controllers/../../certs/private.pem',
+  level: 'error',
+  timestamp: '2022-02-27T10:03:42.351Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:03:42 +0000] "POST /auth/login HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:03:42.364Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:03:55.421Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:03:56.265Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-02-27T10:03:56.927Z'
+}
+{
+  message: { id: 1, username: 'Kunal', role: 'user' },
+  level: 'debug',
+  timestamp: '2022-02-27T10:03:56.935Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:03:56 +0000] "POST /auth/login HTTP/1.1" 200 693 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:03:56.940Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:04:22.598Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:04:23.464Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:04:39.082Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:04:40.026Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:04:47.783Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:04:48.760Z'
+}
+{
+  message: {
+    id: 1,
+    username: 'Kunal',
+    role: 'user',
+    iat: 1645956236,
+    exp: 1645958036
+  },
+  level: 'info',
+  timestamp: '2022-02-27T10:05:12.133Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:05:18 +0000] "POST /user/me HTTP/1.1" - - "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:05:18.766Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:07:06.822Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:07:07.639Z'
+}
+{
+  message: {
+    id: 1,
+    username: 'Kunal',
+    role: 'user',
+    iat: 1645956236,
+    exp: 1645958036
+  },
+  level: 'info',
+  timestamp: '2022-02-27T10:07:11.009Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:07:11 +0000] "POST /user/me HTTP/1.1" 200 136 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:07:11.017Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:18:44.346Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:18:45.300Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:23:08.137Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:23:09.220Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:31:48.569Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:31:49.360Z'
+}
+{
+  message: UserEntity {
+    username: 'Kunal',
+    password: '$2b$12$qJQ8HBUN8mT28HAimNbzhO4Fk/n/minICrSFUGqkifZcPEjkMyABm',
+    role: 'user',
+    id: 1,
+    email: 'kunal@acquire.io'
+  },
+  level: 'info',
+  timestamp: '2022-02-27T10:32:09.566Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:32:09 +0000] "POST /user/me HTTP/1.1" 200 203 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:32:09.571Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:33:17.800Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:33:18.669Z'
+}
+{
+  message: '::1 - - [27/Feb/2022:10:33:20 +0000] "POST /user/me HTTP/1.1" 200 129 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-27T10:33:20.396Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:33:45.563Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:33:46.449Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:36:38.751Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:36:39.585Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:37:30.834Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:37:31.757Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:37:43.564Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:37:44.427Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:38:17.804Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:38:18.664Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:38:31.680Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:38:32.531Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:39:09.100Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:39:09.948Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:39:41.256Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:39:42.099Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-27T10:40:36.540Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-27T10:40:37.349Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:01:22.318Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:01:23.178Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:02:40.392Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:02:41.166Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:04:22.290Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:04:23.073Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:10:21.034Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:10:21.701Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:12:09.980Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:12:10.657Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:12:20.908Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:12:21.620Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:14:14.214Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:14:14.943Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:14:20.798Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:14:21.526Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:14:50.597Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:14:51.346Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:23:12.328Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:23:13.041Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:23:21 +0000] "POST /auth/register HTTP/1.1" 401 50 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:23:21.540Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:23:31 +0000] "POST /auth/register HTTP/1.1" 401 50 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:23:31.820Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:23:52.904Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:23:53.649Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:23:58 +0000] "POST /auth/register HTTP/1.1" 401 50 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:23:58.723Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:24:32.008Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:24:32.684Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:24:32 +0000] "POST /auth/register HTTP/1.1" 401 50 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:24:32.907Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:24:53.774Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:24:54.442Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:24:56 +0000] "POST /auth/register HTTP/1.1" 401 50 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:24:56.348Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:28:56.218Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:28:56.932Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:29:00 +0000] "POST /auth/register HTTP/1.1" 401 50 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:29:00.146Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:29:11.770Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:29:12.503Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:29:59.385Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:30:00.121Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:30:21.706Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:30:22.611Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:30:22 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:30:22.802Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:31:06.268Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:31:07.053Z'
+}
+{
+  message: { email: 'kunal1@acquire.io', username: 'Kunal' },
+  level: 'debug',
+  timestamp: '2022-02-28T04:31:12.522Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:31:12 +0000] "POST /auth/register HTTP/1.1" 200 92 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:31:12.526Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:04:31:17 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T04:31:17.817Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:31:53.189Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:31:54.047Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T04:51:40.746Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T04:51:41.486Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T14:32:57.980Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T14:32:58.871Z'
+}
+{
+  message: 'jwt expired',
+  level: 'error',
+  timestamp: '2022-02-28T14:33:24.641Z'
+}
+{
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2022-02-27T10:33:56.000Z,
+  level: 'error',
+  timestamp: '2022-02-28T14:33:24.642Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:14:33:24 +0000] "POST /user/me HTTP/1.1" 500 52 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T14:33:24.670Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:14:33:31 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T14:33:31.655Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T14:54:19.684Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T14:54:20.418Z'
+}
+{
+  message: {
+    email: 'kunal2@acquire.io',
+    full_name: undefined,
+    mobile_number: undefined
+  },
+  level: 'debug',
+  timestamp: '2022-02-28T14:54:44.457Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:14:54:44 +0000] "POST /auth/register HTTP/1.1" 200 73 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T14:54:44.463Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T14:56:24.102Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T14:56:24.959Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T14:56:42.294Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T14:56:43.058Z'
+}
+{
+  message: {
+    email: 'kunal2@acquire.io',
+    full_name: 'Kunal Dholiya',
+    mobile_number: undefined
+  },
+  level: 'debug',
+  timestamp: '2022-02-28T14:57:04.538Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:14:57:04 +0000] "POST /auth/register HTTP/1.1" 200 101 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T14:57:04.543Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T14:58:09.967Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T14:58:10.728Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T14:58:38.628Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T14:58:39.302Z'
+}
+{
+  message: {
+    email: 'kunal2@acquire.io',
+    full_name: 'Kunal Dholiya',
+    mobile_number: undefined
+  },
+  level: 'debug',
+  timestamp: '2022-02-28T14:58:49.561Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:14:58:49 +0000] "POST /auth/register HTTP/1.1" 200 101 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T14:58:49.566Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:00:36.025Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:00:36.698Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:00:54.892Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:00:55.574Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:00:57 +0000] "POST /auth/register HTTP/1.1" 200 101 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:00:57.039Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:02:16.778Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:02:17.590Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:02:44.314Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:02:45.045Z'
+}
+{ level: 'error', timestamp: '2022-02-28T15:02:49.027Z' }
+{
+  message: '::1 - - [28/Feb/2022:15:02:49 +0000] "POST /auth/register HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:02:49.034Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:03:31.643Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:03:32.427Z'
+}
+{ level: 'error', timestamp: '2022-02-28T15:03:34.271Z' }
+{
+  message: '::1 - - [28/Feb/2022:15:03:34 +0000] "POST /auth/register HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:03:34.276Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:03:53.524Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:03:54.318Z'
+}
+{ level: 'error', timestamp: '2022-02-28T15:03:56.030Z' }
+{
+  message: '::1 - - [28/Feb/2022:15:03:56 +0000] "POST /auth/register HTTP/1.1" 500 44 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:03:56.034Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:04:09.010Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:04:09.659Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:04:23.293Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:04:23.972Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:04:26 +0000] "POST /auth/register HTTP/1.1" 200 101 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:04:26.989Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:04:53.046Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:04:53.761Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:04:57 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:04:57.148Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:05:14 +0000] "POST /auth/register HTTP/1.1" 200 102 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:05:14.919Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:09:19 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:09:19.787Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:09:25 +0000] "POST /auth/register HTTP/1.1" 200 102 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:09:25.715Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:10:00.202Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:10:00.921Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:10:02 +0000] "POST /auth/register HTTP/1.1" 200 102 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:10:02.302Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:10:24.435Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:10:25.125Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:10:28 +0000] "POST /auth/register HTTP/1.1" 200 102 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:10:28.266Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:10:44.043Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:10:44.869Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:10:54.160Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:10:54.854Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:10:56 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:10:56.526Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:11:45.226Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:11:45.898Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:11:47 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:11:47.057Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:11:50 +0000] "POST /auth/register HTTP/1.1" 200 128 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:11:50.620Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-02-28T15:12:13.282Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-02-28T15:12:13.932Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:12:14 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:12:14.417Z'
+}
+{
+  message: '::1 - - [28/Feb/2022:15:12:17 +0000] "POST /auth/register HTTP/1.1" 200 129 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-02-28T15:12:17.721Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:25:23.588Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:25:24.283Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:25:27 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:25:27.573Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:26:01.636Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:26:02.342Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:26:04 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:26:04.373Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:26:15 +0000] "POST /auth/register HTTP/1.1" 200 130 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:26:15.134Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:26:29.102Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:26:29.791Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:26:43.742Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:26:44.510Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:26:50 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:26:50.760Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:26:58 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:26:58.722Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:27:29.724Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:27:30.560Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:27:41.525Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:27:42.229Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:27:44 +0000] "POST /auth/register HTTP/1.1" 200 130 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:27:44.832Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:27:48 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:27:48.313Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:27:53 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:27:53.003Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:27:55 +0000] "POST /auth/register HTTP/1.1" 200 132 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:27:55.735Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:28:02 +0000] "POST /auth/register HTTP/1.1" 500 60 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:28:02.201Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:28:05 +0000] "POST /auth/register HTTP/1.1" 200 134 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:28:05.135Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:29:06 +0000] "POST /auth/register HTTP/1.1" 200 125 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:29:06.077Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-03-01T03:29:32.977Z'
+}
+{
+  message: {
+    id: 1,
+    full_name: 'Kunal Dholiya',
+    email: 'kunal@onquity.io',
+    role: 'user'
+  },
+  level: 'debug',
+  timestamp: '2022-03-01T03:29:32.984Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:29:32 +0000] "POST /auth/login HTTP/1.1" 200 741 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:29:32.985Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:31:41.694Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:31:42.633Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:31:50.176Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:31:51.007Z'
+}
+{
+  message: true,
+  level: 'debug',
+  timestamp: '2022-03-01T03:31:53.296Z'
+}
+{
+  message: '::1 - - [01/Mar/2022:03:31:53 +0000] "POST /auth/login HTTP/1.1" 200 1473 "-" "PostmanRuntime/7.26.8"\n',
+  level: 'info',
+  timestamp: '2022-03-01T03:31:53.311Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:37:32.347Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:37:33.041Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:37:53.378Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:37:54.264Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:39:05.994Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:39:06.888Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:43:41.036Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:43:42.079Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-01T03:44:20.944Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-01T03:44:22.344Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-02T13:51:50.114Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-02T13:51:51.202Z'
+}
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-02T13:56:12.397Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-02T13:56:13.379Z'
+}
