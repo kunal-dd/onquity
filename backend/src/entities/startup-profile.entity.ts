@@ -1,0 +1,40 @@
+import { Column, Entity, JoinColumn, OneToOne } from 'typeorm'
+import CoreEntity from './core.entity'
+import UserEntity from './user.entity'
+
+@Entity('startup-profile')
+export default class StartupProfileEntity extends CoreEntity {
+    @Column({ name: 'startup_name', type: 'varchar', default: null })
+    startup_name: string
+
+    @Column({ name: 'startup_tagline', type: 'varchar', default: null })
+    startup_tagline: string
+
+    @Column({ name: 'startup_logo', type: 'text', default: null })
+    startup_logo: string
+
+    @Column({ name: 'incorporation_date', type: 'date', default: null })
+    incorporation_date: Date
+
+    @Column({ name: 'website', type: 'varchar', default: null })
+    website: string
+
+    @Column({ name: 'description', type: 'varchar', default: null })
+    description: string
+
+    @Column({ name: 'industry', type: 'varchar', default: null })
+    industry: string
+
+    @Column({ name: 'company_size', type: 'varchar', default: null })
+    company_size: string
+
+    @Column({ name: 'company_type', type: 'varchar', default: null })
+    company_type: string
+
+    @Column({ name: 'location', type: 'varchar', default: null })
+    location: string
+
+    @OneToOne(() => UserEntity, (user) => user.startup_profile)
+    @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
+    user: UserEntity
+}

@@ -1,6 +1,9 @@
-import { Column, Entity } from 'typeorm'
+import { Column, Entity, OneToMany, OneToOne } from 'typeorm'
 import { ROLES } from '../constants'
 import CoreEntity from './core.entity'
+import StartupProfileEntity from './startup-profile.entity'
+import UserProfileEntity from './user-profile.entity'
+import UserRecommendation from './user-recommendation.entity'
 
 @Entity('users', { orderBy: { id: 'ASC' } })
 export default class UserEntity extends CoreEntity {
@@ -16,8 +19,17 @@ export default class UserEntity extends CoreEntity {
     @Column({ name: 'password', type: 'varchar' })
     password: string
 
-    @Column({ name: 'role', type: 'enum', enum: ROLES , default: ROLES.USER })
+    @Column({ name: 'role', type: 'enum', enum: ROLES, default: ROLES.USER })
     role: ROLES
+
+    @OneToOne(() => StartupProfileEntity, (startup_profile) => startup_profile.user)
+    startup_profile: StartupProfileEntity
+
+    @OneToOne(() => UserProfileEntity, (user_profile) => user_profile.user)
+    user_profile: UserProfileEntity
+
+    @OneToMany(() => UserRecommendation, (recommendation) => recommendation.user)
+    recommendations: UserRecommendation[]
 
     constructor(full_name: string, password: string, email: string, mobile_no: string) {
         super()
