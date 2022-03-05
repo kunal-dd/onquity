@@ -4,6 +4,7 @@ import User from './user.entity'
 import UserRecommendation from './user-recommendation.entity'
 import UserWorkExperience from './user-work-experience.entity'
 import UserEducation from './user-education.entity'
+import { INDIVIDUAL_USER_TYPE } from '../constants'
 
 export enum STARTUP_EXPERIENCE {
     YES = 'yes',
@@ -14,6 +15,9 @@ export enum STARTUP_EXPERIENCE {
 export default class UserProfile extends CoreEntity {
     @Column({ name: 'profile_image', type: 'text', default: null })
     profile_image: string
+
+    @Column({ name: 'user_type', type: 'enum', enum: INDIVIDUAL_USER_TYPE, default: null })
+    user_type: INDIVIDUAL_USER_TYPE
 
     @Column({ name: 'headline', type: 'text', default: null })
     headline: string

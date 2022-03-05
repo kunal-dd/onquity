@@ -4,7 +4,12 @@ import fs from 'fs'
 import { HTTP_CODE, MESSAGE } from '../constants'
 import User from '../entities/user.entity'
 import { TokenData } from '../interfaces'
-import { registerUser, getUserByEmail, getUserByEmailOrMobile } from '../services'
+import {
+    registerUser,
+    getUserByEmail,
+    getUserByEmailOrMobile,
+    saveRefreshToken,
+} from '../services'
 import { RegisterTransfer } from '../transfers'
 import { compare, error, generate, hash, logger, success } from '../utils'
 
@@ -39,9 +44,10 @@ export const login = async (request: Request, response: Response): Promise<void>
                         expiresIn: '1d',
                         algorithm: 'RS256',
                     })
-                    //TODO: Save refresh token in db
+                    await saveRefreshToken(refreshToken, id)
+
                     if (accessToken && refreshToken) {
-                        success(response, { accessToken, refreshToken }, HTTP_CODE.SUCCESS, role)
+                        success(response, { accessToken, refreshToken }, HTTP_CODE.SUCCESS, MESSAGE.SUCCESS)
                     } else {
                         error(
                             response,

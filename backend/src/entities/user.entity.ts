@@ -18,7 +18,7 @@ export default class User extends CoreEntity {
     @Column({ name: 'password', type: 'varchar' })
     password: string
 
-    @Column({ name: 'role', type: 'enum', enum: ROLES, default: ROLES.USER })
+    @Column({ name: 'role', type: 'enum', enum: ROLES, default: null })
     role: ROLES
 
     @OneToOne(() => StartupProfile, (startup_profile) => startup_profile.user)
@@ -27,12 +27,12 @@ export default class User extends CoreEntity {
     @OneToOne(() => UserProfile, (user_profile) => user_profile.user)
     user_profile: UserProfile
 
-    constructor(full_name: string, password: string, email: string, mobile_no: string) {
+    constructor(full_name: string, password: string, email: string, mobile_no: string, role: ROLES) {
         super()
         this.email = email
         this.mobile_no = mobile_no
         this.full_name = full_name
         this.password = password
-        this.role = ROLES.USER
+        this.role = role
     }
 }
