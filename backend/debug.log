@@ -1742,3 +1742,13 @@
   level: 'info',
   timestamp: '2022-03-04T03:58:43.482Z'
 }
+{
+  message: 'Logging analyzing in debug levels',
+  level: 'debug',
+  timestamp: '2022-03-05T04:12:27.728Z'
+}
+{
+  message: 'Database Connected ...',
+  level: 'info',
+  timestamp: '2022-03-05T04:12:28.972Z'
+}

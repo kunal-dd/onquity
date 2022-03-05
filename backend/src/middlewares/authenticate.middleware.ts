@@ -2,7 +2,7 @@ import { NextFunction, Response } from 'express'
 import fs from 'fs'
 
 import { HTTP_CODE, MESSAGE } from '../constants'
-import UserEntity from '../entities/user.entity'
+import User from '../entities/user.entity'
 import { TokenData } from '../interfaces'
 import { error, logger, verify } from '../utils'
 import { RequestThrow } from '../types'
@@ -21,7 +21,7 @@ export const authenticate = async (
                 const publicSecret = await fs.readFileSync(`${__dirname}/../certs/public.pem`)
                 const tokenDecode: TokenData = await verify(token, publicSecret)
                 const { email } = tokenDecode
-                const user: UserEntity = await getUserByEmail(email)
+                const user: User = await getUserByEmail(email)
                 if (user) {
                     request.currentUser = user
                     next()

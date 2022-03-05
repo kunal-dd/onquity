@@ -2,7 +2,7 @@ import { Column, Entity } from 'typeorm'
 import CoreEntity from './core.entity'
 
 @Entity('refresh_token', { orderBy: { id: 'ASC' } })
-export default class RefreshTokenEntity extends CoreEntity {
+export default class RefreshToken extends CoreEntity {
     @Column({ name: 'user_id', default: null, type: 'int' })
     user_id: string
 

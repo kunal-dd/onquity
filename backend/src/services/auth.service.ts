@@ -1,9 +1,9 @@
 import { getCustomRepository } from 'typeorm'
 import { RegisterTransfer } from '../transfers/register.transfer'
 import { UserRepository } from '../repositories/user.repository'
-import UserEntity from '../entities/user.entity'
+import User from '../entities/user.entity'
 
-export const getUserByEmail = async (email: string): Promise<UserEntity> => {
+export const getUserByEmail = async (email: string): Promise<User> => {
     const userRepo = getCustomRepository(UserRepository)
     try {
         return await userRepo.findOne({ email })
@@ -15,7 +15,7 @@ export const getUserByEmail = async (email: string): Promise<UserEntity> => {
 export const getUserByEmailOrMobile = async (
     email: string,
     mobile: string,
-): Promise<UserEntity[]> => {
+): Promise<User[]> => {
     const userRepo = getCustomRepository(UserRepository)
     try {
         const user = await userRepo.find({
@@ -27,7 +27,7 @@ export const getUserByEmailOrMobile = async (
     }
 }
 
-export const getUserByUserName = async (full_name: string): Promise<UserEntity> => {
+export const getUserByUserName = async (full_name: string): Promise<User> => {
     const userRepo = getCustomRepository(UserRepository)
 
     try {
@@ -37,7 +37,7 @@ export const getUserByUserName = async (full_name: string): Promise<UserEntity> 
     }
 }
 
-export const registerUser = async (payload: RegisterTransfer): Promise<UserEntity> => {
+export const registerUser = async (payload: RegisterTransfer): Promise<User> => {
     const userRepo = getCustomRepository(UserRepository)
 
     const { email, mobile_no, full_name, password } = payload

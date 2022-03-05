@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import fs from 'fs'
 
 import { HTTP_CODE, MESSAGE } from '../constants'
-import UserEntity from '../entities/user.entity'
+import User from '../entities/user.entity'
 import { TokenData } from '../interfaces'
 import { registerUser, getUserByEmail, getUserByEmailOrMobile } from '../services'
 import { RegisterTransfer } from '../transfers'
@@ -12,7 +12,7 @@ export const login = async (request: Request, response: Response): Promise<void>
     try {
         const { email, password } = request.body
         if (email && password) {
-            const user: UserEntity = await getUserByEmail(email)
+            const user: User = await getUserByEmail(email)
             if (user) {
                 const userPw: string = user.password
                 const compareHash: boolean = await compare(password, userPw)

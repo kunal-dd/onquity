@@ -1,9 +1,9 @@
 import { Column, Entity, JoinColumn, OneToOne } from 'typeorm'
 import CoreEntity from './core.entity'
-import UserEntity from './user.entity'
+import User from './user.entity'
 
 @Entity('startup-profile')
-export default class StartupProfileEntity extends CoreEntity {
+export default class StartupProfile extends CoreEntity {
     @Column({ name: 'startup_name', type: 'varchar', default: null })
     startup_name: string
 
@@ -34,7 +34,7 @@ export default class StartupProfileEntity extends CoreEntity {
     @Column({ name: 'location', type: 'varchar', default: null })
     location: string
 
-    @OneToOne(() => UserEntity, (user) => user.startup_profile)
+    @OneToOne(() => User, (user) => user.startup_profile)
     @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
-    user: UserEntity
+    user: User
 }
