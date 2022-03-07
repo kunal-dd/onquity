@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MailerModule } from 'src/mailer/mailer.module';
 import User from 'src/users/entities/user.entity';
 import { UsersService } from 'src/users/users.service';
 import { AuthController } from './auth.controller';
@@ -25,6 +26,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
       }),
       inject: [ConfigService],
     }),
+    MailerModule
   ],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy, JwtRefreshStrategy, UsersService],

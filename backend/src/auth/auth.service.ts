@@ -2,6 +2,7 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
+import { MailerService } from 'src/mailer/mailer.service';
 import User from 'src/users/entities/user.entity';
 
 import { UsersService } from 'src/users/users.service';
@@ -16,6 +17,7 @@ export class AuthService {
     private readonly usersService: UsersService,
     private readonly jwtService: JwtService,
     private readonly configService: ConfigService,
+    private readonly mailerService: MailerService,
   ) {}
 
   public async register(
@@ -34,7 +36,7 @@ export class AuthService {
     }
 
     registerUserDto.password = bcrypt.hashSync(registerUserDto.password, 8);
-    // this.sendMailRegisterUser(registerUserDto);
+    this.sendMailRegisterUser(registerUserDto);
     registerUserDto.profile_uid = await generateRandomNumber(6, true);
 
     await this.usersService.create(registerUserDto);
@@ -157,5 +159,30 @@ export class AuthService {
       accessToken: await this.getAccessToken(payload),
       refreshToken: refreshToken,
     };
+  }
+
+  private sendMailRegisterUser(user): void {
+    this.mailerService
+      .sendMail({
+        to: user.email,
+        from: 'from@example.com',
+        subject: 'Registration successful ✔',
+        text: 'Registration successful!',
+        template: 'index',
+        context: {
+          title: 'Registration successfully',
+          description:
+            "You did it! You registered!, You're successfully registered.✔",
+          nameUser: user.name,
+        },
+      })
+      .then((response) => {
+        console.log(response);
+        console.log('User Registration: Send Mail successfully!');
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log('User Registration: Send Mail Failed!');
+      });
   }
 }
