@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { MailerModule } from './mailer/mailer.module';
 import { ChangePasswordModule } from './change-password/change-password.module';
 import { ForgotPasswordModule } from './forgot-password/forgot-password.module';
+import { StartupModule } from './startup/startup.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -42,6 +43,7 @@ import { ForgotPasswordModule } from './forgot-password/forgot-password.module';
     MailerModule,
     ChangePasswordModule,
     ForgotPasswordModule,
+    StartupModule,
   ],
 })
 export class AppModule {}

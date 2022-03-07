@@ -22,6 +22,7 @@ export class ForgotPasswordController {
         status: 200,
       });
     } catch (err) {
+      console.log("Err: ", err)
       return res.status(HttpStatus.BAD_REQUEST).json({
         message: 'Error: Forgot password failed!',
         status: 400,

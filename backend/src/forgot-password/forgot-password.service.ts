@@ -20,6 +20,9 @@ export class ForgotPasswordService {
     const userUpdate = await this.userRepository.findOne({
       email: forgotPasswordDto.email,
     });
+
+    console.log("userUpdate -->", userUpdate)
+
     const passwordRand = Math.random().toString(36).slice(-8);
     userUpdate.password = bcrypt.hashSync(passwordRand, 8);
 
