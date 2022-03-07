@@ -2,7 +2,9 @@ import {
   Body,
   Controller,
   Get,
+  HttpStatus,
   Post,
+  Res,
   UseGuards,
   ValidationPipe,
 } from '@nestjs/common';
@@ -37,8 +39,12 @@ export class AuthController {
   @ApiBearerAuth()
   @UseGuards(JwtAuthenticationGuard)
   @Get('/logout')
-  logout(@GetUser() user: User) {
-    this.authService.signOut(user);
+  public async logout(@GetUser() user: User, @Res() res) {
+    const data = await this.authService.signOut(user);
+    return res.status(HttpStatus.OK).json({
+      message: 'User logged out successfully!',
+      status: 200,
+    });
   }
 
   @UseGuards(JwtRefreshTokenGuard)
