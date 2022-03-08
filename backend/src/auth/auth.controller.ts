@@ -32,7 +32,7 @@ export class AuthController {
   }
 
   @Post('/login')
-  public async login(@Body() loginDto: LoginDto): Promise<any> {
+  public async login(@Body(ValidationPipe) loginDto: LoginDto): Promise<any> {
     return await this.authService.login(loginDto);
   }
 
@@ -51,7 +51,7 @@ export class AuthController {
   @Post('/refresh-token')
   public async refreshToken(
     @GetUser() user: User,
-    @Body() token: RefreshTokenDto,
+    @Body(ValidationPipe) token: RefreshTokenDto,
   ) {
     const user_info = await this.authService.getUserIfRefreshTokenMatches(
       token.refresh_token,
