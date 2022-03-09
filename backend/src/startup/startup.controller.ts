@@ -14,6 +14,7 @@ import { GetUser } from 'src/auth/decorator/get-user.decorator';
 import { JwtAuthenticationGuard } from 'src/auth/guard/jwt.guard';
 import User from 'src/users/entities/user.entity';
 import { StartupProfileDto } from './dto/startup-profile.dto';
+import { UpdateStartupProfileDto } from './dto/update-startup-profile.dto';
 import { IStartupProfile } from './interfaces/startup.interface';
 import { StartupService } from './startup.service';
 
@@ -43,11 +44,24 @@ export class StartupController {
 
   @ApiBearerAuth()
   @UseGuards(JwtAuthenticationGuard)
-  @Put()
-  public async updateStartupProfile(@GetUser() user: User, @Res() res) {
-    return res.status(HttpStatus.OK).json({
-      message: 'User logged out successfully!',
-      status: 200,
-    });
+  @Put('')
+  public async updateStartupProfile(
+    @GetUser() user: User,
+    @Res() res,
+    @Body(ValidationPipe) updateStartupProfileDto: UpdateStartupProfileDto,
+  ) :Promise<any>{
+    try {
+      const data = await this.startupService.update(user, updateStartupProfileDto);
+
+      return res.status(HttpStatus.OK).json({
+        data: 'Startup profile has updated successfully!',
+        status: 200,
+      });
+    } catch (err) {
+      return res.status(HttpStatus.BAD_REQUEST).json({
+        message: 'Error: User not updated!',
+        status: 400,
+      });
+    }
   }
 }
