@@ -5,14 +5,14 @@ import {
   JoinColumn,
   OneToMany,
   OneToOne,
-  PrimaryGeneratedColumn,
+  PrimaryGeneratedColumn, 
   UpdateDateColumn,
 } from 'typeorm';
 import User from './user.entity';
 import UserRecommendation from './user-recommendation.entity';
 import UserWorkExperience from './user-work-experience.entity';
 import UserEducation from './user-education.entity';
-import { INDIVIDUAL_USER_TYPE, STARTUP_EXPERIENCE } from 'src/utils/constant';
+import { INDIVIDUAL_USER_TYPE, TRUE_FALSE_ENUM } from 'src/utils/constant';
 
 @Entity('user-profile')
 export default class UserProfile {
@@ -30,28 +30,42 @@ export default class UserProfile {
   })
   user_type: INDIVIDUAL_USER_TYPE;
 
-  @Column({ name: 'headline', type: 'text', default: null })
-  headline: string;
+  @Column({ name: 'current_position', type: 'varchar', default: null })
+  current_position: string;
 
-  @Column({ name: 'current_working_as', type: 'varchar', default: null })
-  current_working_as: string;
-
-  @Column({ name: 'area_of_expertise', type: 'simple-array', default: null })
-  area_of_expertise: string[];
-
-  @Column({ name: 'about', type: 'text', default: null })
-  about: string;
-
-  @Column({
-    name: 'startup_experience',
-    type: 'enum',
-    enum: STARTUP_EXPERIENCE,
-    default: STARTUP_EXPERIENCE.NO,
-  })
-  startup_experience: STARTUP_EXPERIENCE;
+  @Column({ name: 'industry', type: 'varchar', default: null })
+  industry: string;
 
   @Column({ name: 'location', type: 'varchar', default: null })
   location: string;
+
+  @Column({ name: 'headline', type: 'text', default: null })
+  headline: string;
+
+  @Column({
+    name: 'is_student',
+    type: 'enum',
+    enum: TRUE_FALSE_ENUM,
+    default: TRUE_FALSE_ENUM.NO,
+  })
+  is_student: TRUE_FALSE_ENUM;
+  
+  @Column({
+    name: 'is_age_verified',
+    type: 'enum',
+    enum: TRUE_FALSE_ENUM,
+    default: TRUE_FALSE_ENUM.YES,
+  })
+  is_age_verified: TRUE_FALSE_ENUM;
+ 
+  @Column({ name: 'about', type: 'text', default: null })
+  about: string;
+
+  @Column({ name: 'area_of_expertise', type: 'simple-array', default: null })
+  area_of_expertise: string[];
+ 
+  @Column({ name: 'total_work_experience', type: 'varchar', default: null })
+  total_work_experience: string;
 
   @OneToMany(() => UserRecommendation, (recommendation) => recommendation.user)
   recommendations: UserRecommendation[];

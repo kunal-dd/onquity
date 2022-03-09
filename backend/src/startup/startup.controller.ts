@@ -25,7 +25,7 @@ export class StartupController {
 
   @ApiBearerAuth()
   @UseGuards(JwtAuthenticationGuard)
-  @Post()
+  @Post("/profile")
   public async createStartupProfile(
     @Res() res,
     @GetUser() user: User,
@@ -44,7 +44,7 @@ export class StartupController {
 
   @ApiBearerAuth()
   @UseGuards(JwtAuthenticationGuard)
-  @Put('')
+  @Put("/profile")
   public async updateStartupProfile(
     @GetUser() user: User,
     @Res() res,

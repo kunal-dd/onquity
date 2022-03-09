@@ -5,13 +5,13 @@ export enum ROLES {
 }
 
 export enum INDIVIDUAL_USER_TYPE {
-  SKILLED_INDIVIDUAL = 'SKILLED_INDIVIDUAL',
+  SKILLED = 'SKILLED',
   EXPERT = 'EXPERT',
   MENTOR = 'MENTOR',
   ANGLE_INVESTOR = 'ANGLE_INVESTOR',
 }
 
-export enum EmploymentType {
+export enum EMPLOYMENT_TYPE {
   FULL_TILE = 'FULL_TIME',
   PART_TIME = 'PART_TIME',
   SELF_EMPLOYED = 'SELF_EMPLOYED',
@@ -20,7 +20,7 @@ export enum EmploymentType {
   TRAINEE = 'TRAINEE',
 }
 
-export enum STARTUP_EXPERIENCE {
+export enum TRUE_FALSE_ENUM {
   YES = 'YES',
   NO = 'NO',
 }

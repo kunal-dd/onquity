@@ -10,6 +10,7 @@ import { UserDto } from './dto/user.dto';
 import User from './entities/user.entity';
 import { IUsers } from './interfaces/user.interface';
 import * as bcrypt from 'bcrypt';
+import UserProfile from './entities/user-profile.entity';
 
 @Injectable()
 export class UsersService {

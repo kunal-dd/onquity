@@ -1,4 +1,4 @@
-import { EmploymentType } from 'src/utils/constant';
+import { EMPLOYMENT_TYPE } from 'src/utils/constant';
 import { CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import {
   Column,
@@ -21,9 +21,9 @@ export default class UserWorkExperience {
     name: 'employment_type',
     default: null,
     type: 'enum',
-    enum: EmploymentType,
+    enum: EMPLOYMENT_TYPE,
   })
-  employment_type: EmploymentType;
+  employment_type: EMPLOYMENT_TYPE;
 
   @Column({ name: 'company_name', default: null, type: 'varchar' })
   company_name: string;

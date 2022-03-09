@@ -9,6 +9,7 @@ import { MailerModule } from './mailer/mailer.module';
 import { ChangePasswordModule } from './change-password/change-password.module';
 import { ForgotPasswordModule } from './forgot-password/forgot-password.module';
 import { StartupModule } from './startup/startup.module';
+import { UserProfileModule } from './user-profile/user-profile.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -44,6 +45,7 @@ import { StartupModule } from './startup/startup.module';
     ChangePasswordModule,
     ForgotPasswordModule,
     StartupModule,
+    UserProfileModule,
   ],
 })
 export class AppModule {}
