@@ -5,11 +5,11 @@ import { UsersModule } from './users/users.module';
 import { winstonOptions } from './app-logging';
 import { WinstonModule } from 'nest-winston';
 import { AuthModule } from './auth/auth.module';
-import { MailerModule } from './mailer/mailer.module';
 import { ChangePasswordModule } from './change-password/change-password.module';
 import { ForgotPasswordModule } from './forgot-password/forgot-password.module';
 import { StartupModule } from './startup/startup.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
+import { MailModule } from './mail/mail.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -41,11 +41,11 @@ import { UserProfileModule } from './user-profile/user-profile.module';
     WinstonModule.forRoot(winstonOptions),
     UsersModule,
     AuthModule,
-    MailerModule,
     ChangePasswordModule,
     ForgotPasswordModule,
     StartupModule,
     UserProfileModule,
+    MailModule,
   ],
 })
 export class AppModule {}
