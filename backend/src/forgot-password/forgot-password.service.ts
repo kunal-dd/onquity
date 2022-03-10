@@ -4,12 +4,15 @@ import { InjectRepository } from '@nestjs/typeorm';
 import * as bcrypt from 'bcrypt';
 import User from 'src/users/entities/user.entity';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
+import { generateRandomNumber } from 'src/utils/helper';
+import { MailService } from 'src/mail/mail.service';
 
 @Injectable()
 export class ForgotPasswordService {
   constructor(
     @InjectRepository(User)
     private userRepository: Repository<User>,
+    private readonly mailService: MailService,
   ) {}
 
   public async forgotPassword(
@@ -19,17 +22,23 @@ export class ForgotPasswordService {
       email: forgotPasswordDto.email,
     });
 
-    const passwordRand = Math.random().toString(36).slice(-8);
-    userUpdate.password = bcrypt.hashSync(passwordRand, 8);
+    userUpdate.reset_password_otp = await generateRandomNumber(6, true);
 
-    // this.sendMailForgotPassword(userUpdate.email, passwordRand);
+    this.sendMailForgotPassword(userUpdate);
 
     return await this.userRepository.save(userUpdate);
   }
 
-  private passwordRand(password): string {
-    const passwordRand = Math.random().toString(36).slice(-8);
-    password = bcrypt.hashSync(passwordRand, 8);
-    return password;
+  private sendMailForgotPassword(user): void {
+    this.mailService
+      .sendForgotPassword(user)
+      .then((response) => {
+        console.log(response);
+        console.log('User Registration: Send Mail successfully!');
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log('User Registration: Send Mail Failed!');
+      });
   }
 }

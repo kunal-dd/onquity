@@ -38,6 +38,10 @@ export default class User {
   @Column({ name: 'role', type: 'enum', enum: ROLES, default: null })
   role: ROLES;
 
+  @Column({ name: 'reset_password_otp', nullable: true, select: false })
+  @Exclude()
+  reset_password_otp?: string;
+
   @OneToOne(() => StartupProfile, (startup_profile) => startup_profile.user)
   startup_profile: StartupProfile;
 
