@@ -168,12 +168,12 @@ export class AuthService {
         from: 'from@example.com',
         subject: 'Registration successful ✔',
         text: 'Registration successful!',
-        template: 'index',
+        template: 'welcome',
         context: {
           title: 'Registration successfully',
           description:
             "You did it! You registered!, You're successfully registered.✔",
-          nameUser: user.name,
+          user_name: user.full_name,
         },
       })
       .then((response) => {
