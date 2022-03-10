@@ -60,4 +60,7 @@ export class StartupProfileDto {
 
   @IsOptional()
   user: User
+
+  @IsOptional()
+  completion_percentage: string
 }

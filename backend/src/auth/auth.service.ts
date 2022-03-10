@@ -72,6 +72,9 @@ export class AuthService {
       throw new UnauthorizedException();
     }
 
+    console.log("loginDto -->", loginDto)
+    console.log("user -->", user)
+
     const passwordIsValid = bcrypt.compareSync(
       loginDto.password,
       user.password,

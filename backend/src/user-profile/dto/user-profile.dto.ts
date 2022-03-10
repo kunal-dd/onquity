@@ -69,4 +69,7 @@ export class UserProfileDto {
 
   @IsOptional()
   user: User
+
+  @IsOptional()
+  completion_percentage: string
 }

@@ -10,4 +10,5 @@ export interface IStartupProfile {
   readonly company_size: COMPANY_SIZE;
   readonly company_type: COMPANY_TYPE;
   readonly location: string;
+  profile_completion: string;
 }

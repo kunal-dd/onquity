@@ -40,7 +40,7 @@ export class AuthController {
   @UseGuards(JwtAuthenticationGuard)
   @Get('/logout')
   public async logout(@GetUser() user: User, @Res() res) {
-    const data = await this.authService.signOut(user);
+    await this.authService.signOut(user);
     return res.status(HttpStatus.OK).json({
       message: 'User logged out successfully!',
       status: 200,

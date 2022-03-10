@@ -48,3 +48,6 @@ Onquity is a SaaS platform that connects startups with skilled individuals on eq
 - [*] Individual profile insert and update
 - [ ] Home page for startup
 - [ ] Home page for individual
+- [ ] Public Timeline
+- [ ] Private Timeline
+- [*] Profile completion in percentage  

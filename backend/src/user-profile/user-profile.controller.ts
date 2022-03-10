@@ -5,12 +5,32 @@ import { JwtAuthenticationGuard } from 'src/auth/guard/jwt.guard';
 import User from 'src/users/entities/user.entity';
 import { UpdateUserProfileDto } from './dto/update-user-profile.dto';
 import { UserProfileDto } from './dto/user-profile.dto';
+import { IUserProfile } from './interfaces/user.interface';
 import { UserProfileService } from './user-profile.service';
 
 @ApiTags('users')
 @Controller('user')
 export class UserProfileController {
   constructor(private readonly userProfileService: UserProfileService) {}
+
+  @ApiBearerAuth()
+  @UseGuards(JwtAuthenticationGuard)
+  @Get('/profile')
+  public async getProfile(
+    @Res() res,
+    @GetUser() user: User,
+  ): Promise<IUserProfile> {
+    try {
+      const profile = await this.userProfileService.get(user);
+
+      return res.status(HttpStatus.OK).json({
+        startup_profile: profile,
+        status: 200,
+      });
+    } catch (err) {
+      throw new HttpException(err, HttpStatus.BAD_REQUEST);
+    }
+  }
 
   @ApiBearerAuth()
   @UseGuards(JwtAuthenticationGuard)

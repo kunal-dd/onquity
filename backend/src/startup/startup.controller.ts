@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Get,
   HttpException,
   HttpStatus,
   Post,
@@ -25,7 +26,26 @@ export class StartupController {
 
   @ApiBearerAuth()
   @UseGuards(JwtAuthenticationGuard)
-  @Post("/profile")
+  @Get('/profile')
+  public async getProfile(
+    @Res() res,
+    @GetUser() user: User,
+  ): Promise<IStartupProfile> {
+    try {
+      const profile = await this.startupService.get(user);
+
+      return res.status(HttpStatus.OK).json({
+        startup_profile: profile,
+        status: 200,
+      });
+    } catch (err) {
+      throw new HttpException(err, HttpStatus.BAD_REQUEST);
+    }
+  }
+
+  @ApiBearerAuth()
+  @UseGuards(JwtAuthenticationGuard)
+  @Post('/profile')
   public async createStartupProfile(
     @Res() res,
     @GetUser() user: User,
@@ -44,14 +64,17 @@ export class StartupController {
 
   @ApiBearerAuth()
   @UseGuards(JwtAuthenticationGuard)
-  @Put("/profile")
+  @Put('/profile')
   public async updateStartupProfile(
     @GetUser() user: User,
     @Res() res,
     @Body(ValidationPipe) updateStartupProfileDto: UpdateStartupProfileDto,
-  ) :Promise<any>{
+  ): Promise<any> {
     try {
-      const data = await this.startupService.update(user, updateStartupProfileDto);
+      const data = await this.startupService.update(
+        user,
+        updateStartupProfileDto,
+      );
 
       return res.status(HttpStatus.OK).json({
         data: 'Startup profile has updated successfully!',

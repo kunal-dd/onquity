@@ -14,6 +14,25 @@ export class StartupService {
     private readonly startupProfileRepository: Repository<StartupProfile>,
   ) {}
 
+  public async get(user: User) : Promise<IStartupProfile> {
+    let profile = await this.startupProfileRepository.findOne({ user: user });
+
+    let returnProfile: IStartupProfile;
+    let iProfile = Object.assign(profile, returnProfile);
+   
+    var filled = 0;
+    for(let k in profile) {
+      if(iProfile.hasOwnProperty(k)) {
+        if(iProfile[k] != null && iProfile[k] != ""){
+          filled++;
+        }
+      }
+    } 
+
+    iProfile.profile_completion = ((filled / Object.keys(iProfile).length)*100).toFixed(2)
+    return iProfile;
+  }
+
   public async create(
     startupProfileDto: StartupProfileDto,
     user: User,
