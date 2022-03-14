@@ -10,6 +10,7 @@ import { ForgotPasswordModule } from './forgot-password/forgot-password.module';
 import { StartupModule } from './startup/startup.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
 import { MailModule } from './mail/mail.module';
+import { ChatModule } from './chat/chat.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -46,6 +47,7 @@ import { MailModule } from './mail/mail.module';
     StartupModule,
     UserProfileModule,
     MailModule,
+    ChatModule,
   ],
 })
 export class AppModule {}
