@@ -41,3 +41,8 @@ export enum COMPANY_SIZE {
   MEDIUM = "50-249",
   LARGE = "More than 250",
 }
+
+export enum MESSAGE_TYPE {
+  FILE = "FILE",
+  TEXT = "TEXT"
+}
