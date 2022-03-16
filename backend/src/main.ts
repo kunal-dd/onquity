@@ -7,6 +7,7 @@ import { winstonOptions } from './app-logging';
 import * as compression from 'compression';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+import { RedisIoAdapter } from './redis.adapter';
 
 async function bootstrap() {
   const logger =
@@ -39,6 +40,10 @@ async function bootstrap() {
       },
     }),
   );
+
+  const redisIoAdapter = new RedisIoAdapter(app);
+  await redisIoAdapter.connectToRedis();
+  app.useWebSocketAdapter(redisIoAdapter);
 
   const port = process.env.SERVER_PORT || 3000;
 

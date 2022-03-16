@@ -25,16 +25,23 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer()
   server: Server;
 
+  liveUsers: number = 0;
+
   @SubscribeMessage('message')
   handleMessage(client: any, payload: any): string {
     return 'Hello world!';
   }
 
   handleConnection(socket: Socket) {
+    this.liveUsers++;
     this.logger.log('Socket connected');
+    this.server.emit("live_users", this.liveUsers)
   }
 
   handleDisconnect(socket: Socket) {
+    this.liveUsers--;
+    this.server.emit("live_users", this.liveUsers)
+
     socket.disconnect()
     this.logger.log('Socket disconnected');
   }
