@@ -4,9 +4,7 @@ import { ChangePasswordDto } from './dto/change-password.dto';
 
 @Injectable()
 export class ChangePasswordService {
-  constructor(
-    private readonly usersService: UsersService,
-  ) {}
+  constructor(private readonly usersService: UsersService) {}
 
   public async changePassword(
     changePasswordDto: ChangePasswordDto,

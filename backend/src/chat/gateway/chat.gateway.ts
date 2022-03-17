@@ -35,14 +35,14 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
   handleConnection(socket: Socket) {
     this.liveUsers++;
     this.logger.log('Socket connected');
-    this.server.emit("live_users", this.liveUsers)
+    this.server.emit('live_users', this.liveUsers);
   }
 
   handleDisconnect(socket: Socket) {
     this.liveUsers--;
-    this.server.emit("live_users", this.liveUsers)
+    this.server.emit('live_users', this.liveUsers);
 
-    socket.disconnect()
+    socket.disconnect();
     this.logger.log('Socket disconnected');
   }
 

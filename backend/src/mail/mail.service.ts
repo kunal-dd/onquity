@@ -14,7 +14,7 @@ export class MailService {
       subject: 'Reset password | Onquity',
       template: 'password-reset', // `.hbs` extension is appended automatically
       context: {
-        title: "Reset password | Onquity",
+        title: 'Reset password | Onquity',
         name: user.full_name,
         otp: user.reset_password_otp,
       },
@@ -28,7 +28,7 @@ export class MailService {
       subject: "We're grateful to welcoming you on onquity!",
       template: 'welcome',
       context: {
-        title: "Welcome to onquity",
+        title: 'Welcome to onquity',
         name: user.full_name,
       },
     });

@@ -8,6 +8,6 @@ import { ForgotPasswordService } from './forgot-password.service';
 @Module({
   imports: [TypeOrmModule.forFeature([User])],
   controllers: [ForgotPasswordController],
-  providers: [ForgotPasswordService, UsersService]
+  providers: [ForgotPasswordService, UsersService],
 })
 export class ForgotPasswordModule {}

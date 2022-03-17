@@ -1,4 +1,4 @@
-import { INDIVIDUAL_USER_TYPE, TRUE_FALSE_ENUM } from "src/utils/constant";
+import { INDIVIDUAL_USER_TYPE, TRUE_FALSE_ENUM } from 'src/utils/constant';
 
 export interface IUserProfile {
   readonly user_type: INDIVIDUAL_USER_TYPE;

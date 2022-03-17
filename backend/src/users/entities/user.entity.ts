@@ -50,7 +50,7 @@ export default class User {
   @OneToOne(() => UserProfile, (user_profile) => user_profile.user)
   user_profile: UserProfile;
 
-  @OneToMany(() => Post, post => post.id)
+  @OneToMany(() => Post, (post) => post.id)
   posts: Post[];
 
   @CreateDateColumn({ name: 'created_at', select: false })

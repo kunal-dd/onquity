@@ -7,6 +7,6 @@ import { StartupService } from './startup.service';
 @Module({
   imports: [TypeOrmModule.forFeature([StartupProfile])],
   controllers: [StartupController],
-  providers: [StartupService]
+  providers: [StartupService],
 })
 export class StartupModule {}

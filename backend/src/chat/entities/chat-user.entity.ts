@@ -1,4 +1,12 @@
-import { CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import {
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import ChatMessage from './chat-message.entity';
 import Chat from './chat.entity';
 
@@ -8,7 +16,7 @@ export default class ChatUsers {
   id: number;
 
   @ManyToOne(() => Chat, (chat) => chat.users)
-  @JoinColumn({name: 'chat_id', referencedColumnName: 'id'})
+  @JoinColumn({ name: 'chat_id', referencedColumnName: 'id' })
   chat: Chat;
 
   @OneToMany(() => ChatMessage, (chat_messages) => chat_messages.message_sender)

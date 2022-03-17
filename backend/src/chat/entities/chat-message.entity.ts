@@ -28,17 +28,17 @@ export default class ChatMessage {
   type: MESSAGE_TYPE;
 
   @Column({
-      name: 'message_status',
-      type: 'varchar'
+    name: 'message_status',
+    type: 'varchar',
   })
-  message_status: string
+  message_status: string;
 
   @ManyToOne(() => Chat, (chat) => chat.messages)
   @JoinColumn({ name: 'chat_id', referencedColumnName: 'id' })
   chat: Chat;
 
   @ManyToOne(() => ChatUsers, (chat_users) => chat_users.messages)
-  @JoinColumn({name: 'sender_id', referencedColumnName: 'id'})
+  @JoinColumn({ name: 'sender_id', referencedColumnName: 'id' })
   message_sender: ChatUsers;
 
   @CreateDateColumn({ name: 'created_at' })

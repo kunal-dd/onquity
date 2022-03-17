@@ -1,4 +1,4 @@
-import { COMPANY_SIZE, COMPANY_TYPE } from "src/utils/constant";
+import { COMPANY_SIZE, COMPANY_TYPE } from 'src/utils/constant';
 
 export interface IStartupProfile {
   readonly startup_name: string;

@@ -14,22 +14,25 @@ export class UserProfileService {
     private readonly userProfileRepository: Repository<UserProfile>,
   ) {}
 
-  public async get(user: User) : Promise<IUserProfile> {
+  public async get(user: User): Promise<IUserProfile> {
     let profile = await this.userProfileRepository.findOne({ user: user });
 
     let returnProfile: IUserProfile;
     let iProfile = Object.assign(profile, returnProfile);
-   
+
     var filled = 0;
-    for(let k in profile) {
-      if(iProfile.hasOwnProperty(k)) {
-        if(iProfile[k] != null && iProfile[k] != ""){
+    for (let k in profile) {
+      if (iProfile.hasOwnProperty(k)) {
+        if (iProfile[k] != null && iProfile[k] != '') {
           filled++;
         }
       }
-    } 
+    }
 
-    iProfile.profile_completion = ((filled / Object.keys(iProfile).length)*100).toFixed(2)
+    iProfile.profile_completion = (
+      (filled / Object.keys(iProfile).length) *
+      100
+    ).toFixed(2);
     return iProfile;
   }
 

@@ -8,6 +8,6 @@ import { UsersService } from 'src/users/users.service';
 @Module({
   imports: [TypeOrmModule.forFeature([User])],
   providers: [ChangePasswordService, UsersService],
-  controllers: [ChangePasswordController]
+  controllers: [ChangePasswordController],
 })
 export class ChangePasswordModule {}

@@ -1,5 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsDate, IsEnum, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import {
+  IsDate,
+  IsEnum,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+} from 'class-validator';
 import User from 'src/users/entities/user.entity';
 import { COMPANY_SIZE, COMPANY_TYPE } from 'src/utils/constant';
 
@@ -52,5 +58,5 @@ export class UpdateStartupProfileDto {
   location: string;
 
   @IsOptional()
-  user: User
+  user: User;
 }
