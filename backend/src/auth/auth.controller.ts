@@ -10,6 +10,7 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import User from 'src/users/entities/user.entity';
+import { IUsers } from 'src/users/interfaces/user.interface';
 import { AuthService } from './auth.service';
 import { GetUser } from './decorator/get-user.decorator';
 import { LoginDto } from './dtos/login.dto';
@@ -39,7 +40,7 @@ export class AuthController {
   @ApiBearerAuth()
   @UseGuards(JwtAuthenticationGuard)
   @Get('/logout')
-  public async logout(@GetUser() user: User, @Res() res) {
+  public async logout(@GetUser() user: IUsers, @Res() res) {
     await this.authService.signOut(user);
     return res.status(HttpStatus.OK).json({
       message: 'User logged out successfully!',

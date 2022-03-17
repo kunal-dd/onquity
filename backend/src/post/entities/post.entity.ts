@@ -49,7 +49,7 @@ export default class Post {
 
   @ManyToOne(() => User, (user) => user.posts)
   @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
-  User: User;
+  user: User;
 
   @CreateDateColumn({ name: 'created_at', select: false })
   createdAt: Date;

@@ -4,6 +4,7 @@ import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { MailService } from 'src/mail/mail.service';
 import User from 'src/users/entities/user.entity';
+import { IUsers } from 'src/users/interfaces/user.interface';
 
 import { UsersService } from 'src/users/users.service';
 import { generateRandomNumber } from 'src/utils/helper';
@@ -106,7 +107,7 @@ export class AuthService {
     };
   }
 
-  async signOut(user: User) {
+  async signOut(user: IUsers) {
     await this.updateRefreshTokenInUser(null, user.email);
   }
 
