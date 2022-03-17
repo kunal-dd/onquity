@@ -11,6 +11,17 @@ export enum INDIVIDUAL_USER_TYPE {
   ANGLE_INVESTOR = 'ANGLE_INVESTOR',
 }
 
+export enum WORK_COMMITMENT_TYPE {
+  FULL_TIME = 'FULL_TIME',
+  PART_TIME = 'PART_TIME',
+}
+
+export enum WORKPLACE_TYPE {
+  ON_SITE = 'ON_SITE',
+  HYBRID = 'HYBRID',
+  REMOTE = 'REMOTE',
+}
+
 export enum EMPLOYMENT_TYPE {
   FULL_TILE = 'FULL_TIME',
   PART_TIME = 'PART_TIME',
@@ -36,13 +47,13 @@ export enum COMPANY_TYPE {
 }
 
 export enum COMPANY_SIZE {
-  MICRO = "Less than 10",
-  SMALL = "10-49",
-  MEDIUM = "50-249",
-  LARGE = "More than 250",
+  MICRO = 'Less than 10',
+  SMALL = '10-49',
+  MEDIUM = '50-249',
+  LARGE = 'More than 250',
 }
 
 export enum MESSAGE_TYPE {
-  FILE = "FILE",
-  TEXT = "TEXT"
+  FILE = 'FILE',
+  TEXT = 'TEXT',
 }

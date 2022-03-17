@@ -11,6 +11,7 @@ import { StartupModule } from './startup/startup.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
 import { MailModule } from './mail/mail.module';
 import { ChatModule } from './chat/chat.module';
+import { PostModule } from './post/post.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -48,6 +49,7 @@ import { ChatModule } from './chat/chat.module';
     UserProfileModule,
     MailModule,
     ChatModule,
+    PostModule,
   ],
 })
 export class AppModule {}

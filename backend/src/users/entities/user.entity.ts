@@ -1,9 +1,11 @@
 import { Exclude } from 'class-transformer';
+import Post from 'src/post/entities/post.entity';
 import { ROLES } from 'src/utils/constant';
 import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -47,6 +49,9 @@ export default class User {
 
   @OneToOne(() => UserProfile, (user_profile) => user_profile.user)
   user_profile: UserProfile;
+
+  @OneToMany(() => Post, post => post.id)
+  posts: Post[];
 
   @CreateDateColumn({ name: 'created_at', select: false })
   createdAt: Date;
