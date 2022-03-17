@@ -18,7 +18,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "@nestjs-modules/mailer": "^1.6.1",
@@ -71,7 +72,9 @@
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
+    "lint-staged": "^12.3.6",
     "nodemailer-express-handlebars": "^5.0.0",
     "prettier": "^2.5.1",
     "source-map-support": "^0.5.21",
@@ -98,5 +101,10 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "npm run precommit"
+    }
   }
 }
