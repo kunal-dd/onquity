@@ -11,8 +11,11 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { GetUser } from 'src/auth/decorator/get-user.decorator';
+import { Roles } from 'src/auth/decorator/role.decorator';
 import { JwtAuthenticationGuard } from 'src/auth/guard/jwt.guard';
+import { RolesGuard } from 'src/auth/guard/roles.guard';
 import { IUsers } from 'src/users/interfaces/user.interface';
+import { ROLES } from 'src/utils/constant';
 import { CreatePostDto } from './dtos/create-post.dto';
 import { UpdatePostDto } from './dtos/update-post.dto';
 import { IPost } from './interfaces/post.interface';
@@ -20,11 +23,12 @@ import { PostService } from './post.service';
 
 @ApiTags('posts')
 @Controller('post')
+@UseGuards(JwtAuthenticationGuard, RolesGuard)
+@ApiBearerAuth()
+@Roles(ROLES.STARTUP)
 export class PostController {
   constructor(private readonly postService: PostService) {}
 
-  @UseGuards(JwtAuthenticationGuard)
-  @ApiBearerAuth()
   @Post()
   public async createPost(
     @Body(ValidationPipe) createPostDto: CreatePostDto,
@@ -33,15 +37,11 @@ export class PostController {
     return this.postService.create(createPostDto, user);
   }
 
-  @UseGuards(JwtAuthenticationGuard)
-  @ApiBearerAuth()
   @Get('/:id')
   public async getSinglePost(@Param('id') postId: number): Promise<IPost> {
     return this.postService.getSinglePost(postId);
   }
 
-  @UseGuards(JwtAuthenticationGuard)
-  @ApiBearerAuth()
   @Put('/:id')
   public async updatePost(
     @Param('id') postId: number,
@@ -51,8 +51,6 @@ export class PostController {
     return this.postService.update(postId, updatePostDto, user);
   }
 
-  @UseGuards(JwtAuthenticationGuard)
-  @ApiBearerAuth()
   @Delete('/:id')
   public async deletePost(@Param('id') postId: number): Promise<any> {
     return this.postService.delete(postId);

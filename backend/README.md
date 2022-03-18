@@ -44,10 +44,10 @@ Onquity is a SaaS platform that connects startups with skilled individuals on eq
 
 ## Todo
 - [ ] Change password logic changes
+- [ ] Only startups can create a post
 - [*] Startup profile insert and update
 - [*] Individual profile insert and update
+- [*] CRUD for POST
 - [ ] Home page for startup
 - [ ] Home page for individual
-- [ ] Public Timeline
-- [ ] Private Timeline
 - [*] Profile completion in percentage  
