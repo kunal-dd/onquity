@@ -23,8 +23,8 @@ import { PostService } from './post.service';
 
 @ApiTags('posts')
 @Controller('post')
-@UseGuards(JwtAuthenticationGuard, RolesGuard)
 @ApiBearerAuth()
+@UseGuards(JwtAuthenticationGuard, RolesGuard)
 @Roles(ROLES.STARTUP)
 export class PostController {
   constructor(private readonly postService: PostService) {}

@@ -12,8 +12,11 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { GetUser } from 'src/auth/decorator/get-user.decorator';
+import { Roles } from 'src/auth/decorator/role.decorator';
 import { JwtAuthenticationGuard } from 'src/auth/guard/jwt.guard';
+import { RolesGuard } from 'src/auth/guard/roles.guard';
 import User from 'src/users/entities/user.entity';
+import { ROLES } from 'src/utils/constant';
 import { StartupProfileDto } from './dto/startup-profile.dto';
 import { UpdateStartupProfileDto } from './dto/update-startup-profile.dto';
 import { IStartupProfile } from './interfaces/startup.interface';
@@ -21,11 +24,12 @@ import { StartupService } from './startup.service';
 
 @ApiTags('startup')
 @Controller('startup')
+@ApiBearerAuth()
+@UseGuards(JwtAuthenticationGuard, RolesGuard)
+@Roles(ROLES.STARTUP)
 export class StartupController {
   constructor(private readonly startupService: StartupService) {}
 
-  @ApiBearerAuth()
-  @UseGuards(JwtAuthenticationGuard)
   @Get('/profile')
   public async getProfile(
     @Res() res,
@@ -43,8 +47,6 @@ export class StartupController {
     }
   }
 
-  @ApiBearerAuth()
-  @UseGuards(JwtAuthenticationGuard)
   @Post('/profile')
   public async createStartupProfile(
     @Res() res,
@@ -62,8 +64,6 @@ export class StartupController {
     }
   }
 
-  @ApiBearerAuth()
-  @UseGuards(JwtAuthenticationGuard)
   @Put('/profile')
   public async updateStartupProfile(
     @GetUser() user: User,

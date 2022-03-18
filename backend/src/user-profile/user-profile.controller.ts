@@ -3,9 +3,6 @@ import {
   Get,
   Post,
   Body,
-  Patch,
-  Param,
-  Delete,
   UseGuards,
   Res,
   ValidationPipe,
@@ -15,8 +12,11 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { GetUser } from 'src/auth/decorator/get-user.decorator';
+import { Roles } from 'src/auth/decorator/role.decorator';
 import { JwtAuthenticationGuard } from 'src/auth/guard/jwt.guard';
+import { RolesGuard } from 'src/auth/guard/roles.guard';
 import User from 'src/users/entities/user.entity';
+import { ROLES } from 'src/utils/constant';
 import { UpdateUserProfileDto } from './dto/update-user-profile.dto';
 import { UserProfileDto } from './dto/user-profile.dto';
 import { IUserProfile } from './interfaces/user.interface';
@@ -24,11 +24,12 @@ import { UserProfileService } from './user-profile.service';
 
 @ApiTags('users')
 @Controller('user')
+@ApiBearerAuth()
+@UseGuards(JwtAuthenticationGuard, RolesGuard)
+@Roles(ROLES.INDIVIDUAL_USER)
 export class UserProfileController {
   constructor(private readonly userProfileService: UserProfileService) {}
 
-  @ApiBearerAuth()
-  @UseGuards(JwtAuthenticationGuard)
   @Get('/profile')
   public async getProfile(
     @Res() res,
@@ -46,8 +47,6 @@ export class UserProfileController {
     }
   }
 
-  @ApiBearerAuth()
-  @UseGuards(JwtAuthenticationGuard)
   @Post('/profile')
   public async createUserProfile(
     @Res() res,
@@ -68,8 +67,6 @@ export class UserProfileController {
     }
   }
 
-  @ApiBearerAuth()
-  @UseGuards(JwtAuthenticationGuard)
   @Put('/profile')
   public async updateUserProfile(
     @GetUser() user: User,
