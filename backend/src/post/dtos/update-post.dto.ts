@@ -42,4 +42,9 @@ export class UpdatePostDto {
   @IsOptional()
   @IsString()
   readonly equity: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  readonly expertise: string [];
 }

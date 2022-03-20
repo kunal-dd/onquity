@@ -36,6 +36,10 @@ export class CreatePostDto {
   readonly description: string;
 
   @ApiProperty()
+  @IsArray()
+  readonly expertise: string [];
+
+  @ApiProperty()
   @IsString()
   readonly equity: string;
 }

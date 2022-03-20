@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
+  IsArray,
   IsDate,
   IsEnum,
   IsNotEmpty,
@@ -69,7 +70,7 @@ export class UserProfileDto {
   about: string;
 
   @ApiProperty()
-  @IsString()
+  @IsArray()
   @IsNotEmpty()
   area_of_expertise: string[];
 

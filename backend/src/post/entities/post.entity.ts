@@ -47,11 +47,14 @@ export default class Post {
   @Column({ name: 'equity', type: 'varchar', default: null })
   equity: string;
 
+  @Column({name: 'expertise', type: 'simple-array', default: null})
+  expertise: string[]
+
   @ManyToOne(() => User, (user) => user.posts)
   @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
   user: User;
 
-  @CreateDateColumn({ name: 'created_at', select: false })
+  @CreateDateColumn({ name: 'created_at'})
   createdAt: Date;
 
   @UpdateDateColumn({ name: 'updated_at', select: false })

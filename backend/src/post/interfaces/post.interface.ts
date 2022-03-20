@@ -8,4 +8,5 @@ export interface IPost {
   readonly workplace: WORKPLACE_TYPE;
   readonly description: string;
   readonly equity: string;
+  readonly expertise: string[];
 }

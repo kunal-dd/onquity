@@ -61,6 +61,7 @@ export class UsersService {
       where: {
         id: userId,
       },
+      relations: ["user_profile", "startup_profile"]
     });
 
     if (!user) {
