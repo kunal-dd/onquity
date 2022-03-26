@@ -5,14 +5,13 @@ import { UsersModule } from './users/users.module';
 import { winstonOptions } from './app-logging';
 import { WinstonModule } from 'nest-winston';
 import { AuthModule } from './auth/auth.module';
-import { ChangePasswordModule } from './change-password/change-password.module';
-import { ForgotPasswordModule } from './forgot-password/forgot-password.module';
 import { StartupModule } from './startup/startup.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
 import { MailModule } from './mail/mail.module';
 import { ChatModule } from './chat/chat.module';
 import { PostModule } from './post/post.module';
 import { TimelineModule } from './timeline/timeline.module';
+import { UserSessionModule } from './user-session/user-session.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -44,14 +43,13 @@ import { TimelineModule } from './timeline/timeline.module';
     WinstonModule.forRoot(winstonOptions),
     UsersModule,
     AuthModule,
-    ChangePasswordModule,
-    ForgotPasswordModule,
     StartupModule,
     UserProfileModule,
     MailModule,
     ChatModule,
     PostModule,
     TimelineModule,
+    UserSessionModule,
   ],
 })
 export class AppModule {}

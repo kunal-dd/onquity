@@ -7,4 +7,5 @@ export interface IUsers {
   readonly mobile_no: string;
   password: string;
   readonly role: ROLES;
+  reset_password_otp? : string
 }

@@ -5,12 +5,14 @@ import * as bcrypt from 'bcrypt';
 import { MailService } from 'src/mail/mail.service';
 import User from 'src/users/entities/user.entity';
 import { IUsers } from 'src/users/interfaces/user.interface';
+import * as jwt from 'jsonwebtoken';
 
 import { UsersService } from 'src/users/users.service';
-import { generateRandomNumber } from 'src/utils/helper';
+import { ForgotPasswordDto } from './dtos/forgot-password.dto';
 import { LoginDto } from './dtos/login.dto';
 import { RegisterUserDto } from './dtos/register-user.dto';
 import { JwtPayload } from './interface/jwt.payload';
+import { generateRandomNumber } from '../utils/helper/random-number.helper';
 
 @Injectable()
 export class AuthService {
@@ -111,12 +113,87 @@ export class AuthService {
     await this.updateRefreshTokenInUser(null, user.email);
   }
 
+  async forgotPassword(forgotPasswordDto: ForgotPasswordDto): Promise<any> {
+    const user = await this.usersService.findByEmail(forgotPasswordDto.email);
+
+    const otp = await generateRandomNumber(6, true);
+    user.reset_password_otp = otp;
+    const payload = {
+      email: forgotPasswordDto.email,
+      otp,
+    };
+
+    const forgotPasswordToken = await this.getForgotPasswordToken(payload);
+    const url = `http://localhost:3000/change-password/token=${forgotPasswordToken}/key=${otp}`;
+    console.log('URL :>', forgotPasswordToken);
+    this.sendMailForgotPassword(user, url);
+
+    return await this.usersService.updateUser(user);
+  }
+
+  async validateTokenAndKey(token: string, key: string) {
+    // validate token and key
+    const data: any = await jwt.verify(
+      token,
+      this.configService.get<string>('SECRET_KEY_JWT_FORGOT_PASSWORD'),
+    );
+
+    if (!data) {
+      return {
+        message: 'Authentication failed. Wrong password',
+        status: 400,
+      };
+    }
+
+    const verifyUser = await this.usersService.validateUserByEmailAndOtp(
+      data.email,
+      key,
+    );
+    if (!verifyUser) {
+      return {
+        message: 'Authentication failed. Wrong password',
+        status: 400,
+      };
+    }
+
+    const payload = {
+      email: data.email,
+    };
+
+    const accessToken = this.jwtService.sign(payload);
+    const refreshToken = await this.getRefreshToken(payload);
+
+    await this.updateRefreshTokenInUser(refreshToken, data.email);
+
+    return {
+      accessToken,
+      refreshToken,
+    };
+  }
+
+  async resetPassword(changePasswordDto, user: IUsers) {
+    changePasswordDto.password = bcrypt.hashSync(changePasswordDto.password, 8);
+    user.password = changePasswordDto.password;
+
+    return this.usersService.updateUser(user);
+  }
+
   async updateRefreshTokenInUser(refreshToken: string, email: string) {
     if (refreshToken) {
       refreshToken = await bcrypt.hash(refreshToken, 10);
     }
 
     await this.usersService.updateRefreshToken(refreshToken, email);
+  }
+
+  public async getForgotPasswordToken(payload: JwtPayload) {
+    const forgotPasswordToken = await this.jwtService.sign(payload, {
+      secret: this.configService.get<string>('SECRET_KEY_JWT_FORGOT_PASSWORD'),
+      expiresIn: this.configService.get<number>(
+        'JWT_FORGOT_PASSWORD_EXPIRATION',
+      ),
+    });
+    return forgotPasswordToken;
   }
 
   public async getAccessToken(payload: JwtPayload) {
@@ -164,6 +241,19 @@ export class AuthService {
   private sendMailRegisterUser(user): void {
     this.mailService
       .sendWelcomeEmail(user)
+      .then((response) => {
+        console.log(response);
+        console.log('User Registration: Send Mail successfully!');
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log('User Registration: Send Mail Failed!');
+      });
+  }
+
+  private sendMailForgotPassword(user, url): void {
+    this.mailService
+      .sendForgotPassword(user, url)
       .then((response) => {
         console.log(response);
         console.log('User Registration: Send Mail successfully!');

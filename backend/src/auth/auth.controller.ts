@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   HttpStatus,
+  Param,
   Post,
   Res,
   UseGuards,
@@ -13,6 +14,8 @@ import User from 'src/users/entities/user.entity';
 import { IUsers } from 'src/users/interfaces/user.interface';
 import { AuthService } from './auth.service';
 import { GetUser } from './decorator/get-user.decorator';
+import { ChangePasswordDto } from './dtos/change-password.dto';
+import { ForgotPasswordDto } from './dtos/forgot-password.dto';
 import { LoginDto } from './dtos/login.dto';
 import { RefreshTokenDto } from './dtos/refresh-token.dto';
 import { RegisterUserDto } from './dtos/register-user.dto';
@@ -46,6 +49,63 @@ export class AuthController {
       message: 'User logged out successfully!',
       status: 200,
     });
+  }
+
+  @Post('/forgot-password')
+  public async forgotPassword(
+    @Res() res,
+    @Body() forgotPasswordDto: ForgotPasswordDto,
+  ): Promise<any> {
+    try {
+      await this.authService.forgotPassword(forgotPasswordDto);
+
+      return res.status(HttpStatus.OK).json({
+        message: 'Request Reset Password Successfully!',
+        status: 200,
+      });
+    } catch (err) {
+      console.log('Err: ', err);
+      return res.status(HttpStatus.BAD_REQUEST).json({
+        message: 'Error: Forgot password failed!',
+        status: 400,
+      });
+    }
+  }
+
+  @Get('/change-password/:token/:key')
+  public async changePassword(
+    @Res() res,
+    @Param('token') token: string,
+    @Param('key') key: string,
+  ): Promise<any> {
+    try {
+      if (!token || !key) {
+        return res.status(HttpStatus.BAD_REQUEST).json({
+          message: 'Error: Forgot password failed!',
+          status: 400,
+        });
+      }
+      const data = await this.authService.validateTokenAndKey(token, key);
+      return res.status(HttpStatus.OK).json({
+        message: data,
+        status: 200,
+      });
+    } catch (err) {
+      console.log('Err: ', err);
+      return res.status(HttpStatus.BAD_REQUEST).json({
+        message: 'Error: Forgot password failed!',
+        status: 400,
+      });
+    }
+  }
+
+  @UseGuards(JwtAuthenticationGuard)
+  @Post('/change-password')
+  public async resetPassword(
+    @Body(ValidationPipe) changePassword: ChangePasswordDto,
+    @GetUser() user: IUsers,
+  ): Promise<any> {
+    return await this.authService.resetPassword(changePassword, user);
   }
 
   @UseGuards(JwtRefreshTokenGuard)

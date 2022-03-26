@@ -7,7 +7,7 @@ import { join } from 'path';
 export class MailService {
   constructor(private mailerService: MailerService) {}
 
-  async sendForgotPassword(user: User) {
+  async sendForgotPassword(user: User, url: string) {
     await this.mailerService.sendMail({
       to: user.email,
       from: '"Team Onquity" <hello@onquity.com>',
@@ -17,6 +17,7 @@ export class MailService {
         title: 'Reset password | Onquity',
         name: user.full_name,
         otp: user.reset_password_otp,
+        url
       },
     });
   }

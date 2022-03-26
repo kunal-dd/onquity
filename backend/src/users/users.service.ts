@@ -79,12 +79,24 @@ export class UsersService {
     }
   }
 
-  public async updateByEmail(email: string): Promise<User> {
-    try {
-      const user = await this.userRepository.findOne({ email: email });
-      user.password = bcrypt.hashSync(Math.random().toString(36).slice(-8), 8);
+  public async validateUserByEmailAndOtp(email, otp): Promise<IUsers> {
+    const user = await this.userRepository.findOne({
+      where: {
+        email,
+        reset_password_otp: otp
+      }
+    });
 
-      return await this.userRepository.save(user);
+    if (!user) {
+      throw new NotFoundException(`User not found`);
+    }
+
+    return user;
+  }
+
+  public async updateUser(data): Promise<User> {
+    try {
+      return await this.userRepository.save(data);
     } catch (err) {
       throw new HttpException(err, HttpStatus.BAD_REQUEST);
     }
