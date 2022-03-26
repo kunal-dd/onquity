@@ -132,7 +132,6 @@ export class AuthService {
   }
 
   async validateTokenAndKey(token: string, key: string) {
-    // validate token and key
     const data: any = await jwt.verify(
       token,
       this.configService.get<string>('SECRET_KEY_JWT_FORGOT_PASSWORD'),
