@@ -11,7 +11,6 @@ import { MailModule } from './mail/mail.module';
 import { ChatModule } from './chat/chat.module';
 import { PostModule } from './post/post.module';
 import { TimelineModule } from './timeline/timeline.module';
-import { UserSessionModule } from './user-session/user-session.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -49,7 +48,6 @@ import { UserSessionModule } from './user-session/user-session.module';
     ChatModule,
     PostModule,
     TimelineModule,
-    UserSessionModule,
   ],
 })
 export class AppModule {}

@@ -6,9 +6,9 @@ import User from 'src/users/entities/user.entity';
 import { UsersService } from 'src/users/users.service';
 import Post from 'src/post/entities/post.entity';
 import { PostService } from 'src/post/post.service';
-
+import UserSessions from 'src/users/entities/user-sessions.entity';
 @Module({
-  imports: [TypeOrmModule.forFeature([User, Post])],
+  imports: [TypeOrmModule.forFeature([User, Post, UserSessions])],
   providers: [TimelineService, UsersService, PostService],
   controllers: [TimelineController],
 })

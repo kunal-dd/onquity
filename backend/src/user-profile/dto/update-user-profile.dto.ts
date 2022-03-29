@@ -1,19 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
-import {
-  IsDate,
-  IsEnum,
-  IsNotEmpty,
-  IsOptional,
-  IsString,
-} from 'class-validator';
-import User from 'src/users/entities/user.entity';
-import {
-  COMPANY_SIZE,
-  COMPANY_TYPE,
-  INDIVIDUAL_USER_TYPE,
-  TRUE_FALSE_ENUM,
-} from 'src/utils/constant';
-
+import { IsEnum, IsOptional } from 'class-validator';
+import { INDIVIDUAL_USER_TYPE, TRUE_FALSE_ENUM } from 'src/utils/constant';
 export class UpdateUserProfileDto {
   @ApiProperty({
     enum: INDIVIDUAL_USER_TYPE,

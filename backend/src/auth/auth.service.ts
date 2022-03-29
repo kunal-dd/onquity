@@ -1,4 +1,9 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
@@ -86,15 +91,23 @@ export class AuthService {
       };
     }
 
+    const session = await this.usersService.startSession(user);
+    if (!session) {
+      return {
+        message: 'Something went wrong! Please try again.',
+        status: 400,
+      };
+    }
+
     const payload = {
       email: user.email,
+      session_id: session.id,
     };
 
     const accessToken = this.jwtService.sign(payload);
     const refreshToken = await this.getRefreshToken(payload);
 
     await this.updateRefreshTokenInUser(refreshToken, user.email);
-
     const userResponse = {
       full_name: user.full_name,
       email: user.email,
@@ -110,7 +123,12 @@ export class AuthService {
   }
 
   async signOut(user: IUsers) {
-    await this.updateRefreshTokenInUser(null, user.email);
+    try {
+      await this.usersService.endSession(user.session_id);
+      await this.updateRefreshTokenInUser(null, user.email);
+    } catch (err) {
+      throw new HttpException(err, HttpStatus.BAD_REQUEST);
+    }
   }
 
   async forgotPassword(forgotPasswordDto: ForgotPasswordDto): Promise<any> {
@@ -216,7 +234,7 @@ export class AuthService {
 
     const isRefreshTokenMatching = await bcrypt.compare(
       refreshToken,
-      user.hashedRefreshToken,
+      user.hashed_refresh_token,
     );
 
     if (isRefreshTokenMatching) {

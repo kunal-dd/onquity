@@ -12,6 +12,7 @@ import {
 } from 'typeorm';
 import StartupProfile from './startup-profile.entity';
 import UserProfile from './user-profile.entity';
+import UserSessions from './user-sessions.entity';
 
 @Entity('users', { orderBy: { id: 'ASC' } })
 export default class User {
@@ -29,7 +30,7 @@ export default class User {
 
   @Column({ name: 'hashed_refresh_token', nullable: true, select: false })
   @Exclude()
-  public hashedRefreshToken?: string;
+  public hashed_refresh_token?: string;
 
   @Column({ name: 'mobile_no', type: 'varchar', default: null })
   mobile_no: string;
@@ -52,6 +53,9 @@ export default class User {
 
   @OneToMany(() => Post, (post) => post.id)
   posts: Post[];
+
+  @OneToMany(() => UserSessions, (user_session) => user_session.id)
+  user_sessions: UserSessions[];
 
   @CreateDateColumn({ name: 'created_at', select: false })
   createdAt: Date;

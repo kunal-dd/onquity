@@ -10,12 +10,16 @@ import { UserDto } from './dto/user.dto';
 import User from './entities/user.entity';
 import { IUsers } from './interfaces/user.interface';
 import * as bcrypt from 'bcrypt';
-
+import UserSessions from './entities/user-sessions.entity';
+import { UserSessionDto } from './dto/user-session.dto';
+import { UpdateUserSessionDto } from './dto/update-user-session';
 @Injectable()
 export class UsersService {
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
+    @InjectRepository(UserSessions)
+    private readonly userSessionRepository: Repository<UserSessions>,
   ) {}
 
   public async findByEmail(email: string): Promise<User> {
@@ -27,6 +31,7 @@ export class UsersService {
         'full_name',
         'mobile_no',
         'profile_uid',
+        'hashed_refresh_token',
         'role',
       ],
       where: {
@@ -61,7 +66,7 @@ export class UsersService {
       where: {
         id: userId,
       },
-      relations: ["user_profile", "startup_profile"]
+      relations: ['user_profile', 'startup_profile'],
     });
 
     if (!user) {
@@ -83,8 +88,8 @@ export class UsersService {
     const user = await this.userRepository.findOne({
       where: {
         email,
-        reset_password_otp: otp
-      }
+        reset_password_otp: otp,
+      },
     });
 
     if (!user) {
@@ -119,11 +124,41 @@ export class UsersService {
   public async updateRefreshToken(token: string, email: string): Promise<User> {
     try {
       const user = await this.userRepository.findOne({ email: email });
-      user.hashedRefreshToken = token;
+      user.hashed_refresh_token = token;
 
       return await this.userRepository.save(user);
     } catch (err) {
       throw new HttpException(err, HttpStatus.BAD_REQUEST);
+    }
+  }
+
+  public async startSession(user: User): Promise<any> {
+    try {
+      const sessionData: UserSessionDto = {
+        session_started: new Date(),
+        session_ended: null,
+        user: user,
+      };
+      return await this.userSessionRepository.save(sessionData);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
+  }
+
+  public async endSession(session_id: string) {
+    try {
+      const id = parseInt(session_id);
+      const currentSession = await this.userSessionRepository.findOne({ id });
+      const sessionData: UpdateUserSessionDto = {
+        session_started: currentSession.session_started,
+        session_ended: new Date(),
+      };
+
+      let update = Object.assign(currentSession, sessionData);
+      return await this.userSessionRepository.save(update);
+
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }
   }
 }

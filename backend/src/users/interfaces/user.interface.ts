@@ -8,4 +8,5 @@ export interface IUsers {
   password: string;
   readonly role: ROLES;
   reset_password_otp? : string
+  session_id?: string
 }
