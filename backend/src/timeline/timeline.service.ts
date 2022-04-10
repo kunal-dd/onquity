@@ -42,7 +42,6 @@ export class TimelineService {
   ): Promise<any | ITimeLineUser[]> {
     if (profile.area_of_expertise.length > 0) {
       const user_expertise = profile.area_of_expertise;
-      console.log('user_expertise :>', user_expertise);
       return this.postService.getPostsForIndividuals(user_expertise);
     } else {
       return {
