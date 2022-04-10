@@ -5,6 +5,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { RedisCacheService } from 'src/redis-cache/redis-cache.service';
 import { In, Repository } from 'typeorm';
 import Post from './entities/post.entity';
 import { IPost } from './interfaces/post.interface';
@@ -13,6 +14,7 @@ import { IPost } from './interfaces/post.interface';
 export class PostService {
   constructor(
     @InjectRepository(Post) private readonly postRepository: Repository<Post>,
+    private readonly redisCacheService: RedisCacheService
   ) {}
   public async create(createPostDto, user): Promise<IPost> {
     try {

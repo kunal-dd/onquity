@@ -11,6 +11,7 @@ import { MailModule } from './mail/mail.module';
 import { ChatModule } from './chat/chat.module';
 import { PostModule } from './post/post.module';
 import { TimelineModule } from './timeline/timeline.module';
+import { RedisCacheModule } from './redis-cache/redis-cache.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -48,6 +49,7 @@ import { TimelineModule } from './timeline/timeline.module';
     ChatModule,
     PostModule,
     TimelineModule,
+    RedisCacheModule,
   ],
 })
 export class AppModule {}
