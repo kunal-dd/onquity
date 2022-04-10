@@ -25,10 +25,10 @@ import { PostService } from './post.service';
 @Controller('post')
 @ApiBearerAuth()
 @UseGuards(JwtAuthenticationGuard, RolesGuard)
-@Roles(ROLES.STARTUP)
 export class PostController {
   constructor(private readonly postService: PostService) {}
 
+  @Roles(ROLES.STARTUP)
   @Post()
   public async createPost(
     @Body(ValidationPipe) createPostDto: CreatePostDto,
@@ -42,6 +42,7 @@ export class PostController {
     return this.postService.getSinglePost(postId);
   }
 
+  @Roles(ROLES.STARTUP)
   @Put('/:id')
   public async updatePost(
     @Param('id') postId: number,
@@ -51,6 +52,7 @@ export class PostController {
     return this.postService.update(postId, updatePostDto, user);
   }
 
+  @Roles(ROLES.STARTUP)
   @Delete('/:id')
   public async deletePost(@Param('id') postId: number): Promise<any> {
     return this.postService.delete(postId);
