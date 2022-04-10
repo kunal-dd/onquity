@@ -1,0 +1,140 @@
+.onquity-input{
+    label{
+        padding-left: 0;
+        color: rgba($color-secondary-text, 0.5);
+    }
+    .form-control, .password-icon{
+        background-color: transparent;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+        padding-left: 0;
+        color: $color-primary-text;
+        font-size: rem(16px);
+        border-color: #837F96;
+        &:focus{
+            box-shadow: none;
+            border-color: $color-primary-text;
+            & + label{
+                padding-top: 0.5rem;
+                color: #fff;
+                border: 0;
+                opacity: 1;
+            }
+        }
+        &:not(:placeholder-shown) {
+            border-color: $color-primary-text;
+            + label{
+                color: #fff;
+                border: 0;
+                opacity: 1;
+                padding-top: 0.5rem;
+            }
+            ~ .input-group-text{
+                border-color: $color-primary-text !important;
+            }
+        }
+    }
+    & .password-icon{
+        align-items: flex-end;
+        padding-bottom: 1rem;
+        border-color: #837F96 !important;
+        & svg{
+            fill: $color-blue-58;
+            opacity: 0.3;
+        }
+        & .toggle-password{
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                height: 0;
+                width: 2px;
+                border-radius: 8px;
+                background: #2f2458;
+                transform: translate(-50%, -44%) rotate(45deg);
+            }
+            &.hidePassword:after{
+                animation: height_anim 0.3s ease-in-out forwards;
+            }
+        }
+        &.location--icon{
+            & svg{
+                opacity: 1;
+            }
+        }
+    }
+    &.invalid-input{
+        .form-control{
+            border-color: $color-red-de;
+            &:focus{
+                & + label{
+                color: $color-red-de;
+                }
+            }
+            &:not(:placeholder-shown) + label{
+                color: $color-red-de;
+            }
+        }
+    }
+}
+.onquity-input .form-control:not(:placeholder-shown) ~ .input-group-text, .onquity-input .form-control:focus ~ .input-group-text{
+    border-color: $color-primary-text !important;
+}
+.onquity-check{
+    & .form-check-input{
+        background-color: transparent;
+        border: 2px solid $color-blue-58;
+        &:checked{
+           background-image: url(./../../images/check-icon.svg);
+           background-size: 9px;
+        }
+    }
+}
+.onquity-radio{
+    position: relative;
+    & .btn-radio{
+        background-color: #24202B;
+        color: $color-primary-text;
+        border-radius: 8px;
+        min-width: rem(170px);
+        border: 1px solid #24202B;
+        padding: rem(10px);
+        margin-right: rem(18px);
+    }
+    & .btn-check:checked + .btn-radio{
+        border-color: $color-blue-58;
+        box-shadow: none;
+    }
+}
+.onquity-switch{
+    padding-left: 0;
+  & .form-check-input, .form-check-input:focus{
+        width: 54px;
+        height: 28px;
+        background: linear-gradient(180deg, #100E11 0%, #26222D 100%);
+        box-shadow: inset 0px 3px 20px rgba(0, 0, 0, 0.15);
+        border: 2px solid #282D33;
+        background-repeat: no-repeat;
+        background-image: url(./../../images/switch_on.svg);
+        background-size: 34px;
+        background-position: -5px center;
+    &:checked{
+        background-image: url(./../../images/switch_off.svg);
+        background-position: 21px center;
+    }
+    }
+}
+
+
+@keyframes height_anim {
+    from{
+        height: 0;
+    }
+    to{
+        height: 120%;
+    }
+}

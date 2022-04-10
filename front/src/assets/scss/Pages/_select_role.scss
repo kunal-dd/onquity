@@ -1,0 +1,18 @@
+.select_role{
+    & .card{
+        border-radius: 8px;
+        height: 100%;
+    }
+    &-blue-card{
+        background: $color-gradiant-blue;
+        & .select_role-img{
+            height: rem(90px);
+        }
+    }
+    &-purple-card{
+        background: $color-gradiant-purple;
+        & .select_role-img{
+            width: rem(70px);
+        }
+    }
+}

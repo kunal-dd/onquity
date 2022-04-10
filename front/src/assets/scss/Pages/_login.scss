@@ -1,0 +1,92 @@
+.onquity-main{
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+    .navbar{
+        max-width: 80%;
+        margin: auto;
+    }
+    .main_section{
+        flex: 1;
+        @extend %overflow-auto;
+        & > .container-fluid{
+            height: 100%;
+        }
+        &--inner{
+            height: 100%;
+        }
+    }
+    .header-logo{
+        max-width: rem(200px);
+    }
+    .login_register_wrap {
+        max-width: 80%;
+        margin: auto;
+    }
+    .or-separator {
+        text-align: center;
+        position: relative;
+        &::after{
+            content: '';
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: rgba($color-primary-text, 0.1);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+    }
+    .welcome_section{
+        background-color: $color-dark;
+        &-slider{
+            .carousel-inner{
+                .carousel-item{
+                    .welcome-img{
+                        max-height: rem(300px);
+                        @include screen-xxl-up{
+                            max-height: rem(400px);
+                        }
+                    }
+                }
+            }
+        }
+        .carousel-indicators{
+            top: 100%;
+            justify-content: flex-start;
+            margin-left: 0;
+            margin-top: rem(40px);
+            & button{
+                border-top: 0;
+                border-bottom: 0;
+                background-color: $color-secondary-92;
+                border-radius: rem(61px);
+                height: 4px;
+                &.active{
+                    background: $color-gradiant-bg;
+                }
+            }
+        }
+    }
+}
+.text-gradiant{
+    @include gradiant-text;
+}
+.download_app{
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    &-btn{
+        padding: 0;
+        border: 0;
+        border-radius: 8px;
+        background-color: transparent;
+        margin-right: 10px;
+        & img{
+            @include screen-xxl-up{
+                width: rem(150px);
+            }
+        }
+    }
+}

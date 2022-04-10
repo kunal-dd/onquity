@@ -1,0 +1,91 @@
+%basic-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%basic-flex-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin set-flex($flex, $flex-direction, $align-items, $justify-content) {
+    display: $flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin set-flex-justify($flex, $flex-direction, $justify-content) {
+    display: $flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+@mixin set-flex-align($flex, $flex-direction, $align-items) {
+    display: $flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+}
+
+%overflow-auto {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+@mixin gradiant-text{
+   background: -webkit-linear-gradient(92.51deg, #77DEC3 1.95%, #8893ED 95.73%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.w-{
+    &25{
+        width: 25% !important;
+    } 
+    &50{
+        width: 50% !important;
+    } 
+    &75{
+        width: 75% !important;
+    } 
+    &100{
+        width: 100% !important;
+    } 
+}
+@include screen-xl-up{
+    .w-xl-{
+        &25{
+            width: 25% !important;
+        } 
+        &50{
+            width: 50% !important;
+        } 
+        &75{
+            width: 75% !important;
+        } 
+        &100{
+            width: 100% !important;
+        } 
+    }
+}
+@include screen-xxl-up{
+    .w-xxl-{
+        &25{
+            width: 25% !important;
+        } 
+        &50{
+            width: 50% !important;
+        } 
+        &75{
+            width: 75% !important;
+        } 
+        &100{
+            width: 100% !important;
+        } 
+    }
+}

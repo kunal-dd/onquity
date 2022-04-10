@@ -1,0 +1,27 @@
+@import './../Abstract/variables';
+@each $Colors,
+$i in $Colors {
+    .text {
+        &-#{$Colors} {
+            color: $i !important;
+        }
+    }
+}
+
+@each $Colors,
+$i in $Colors {
+    .bg {
+        &-#{$Colors} {
+            background-color: $i !important;
+        }
+    }
+}
+
+@each $Colors,
+$i in $Colors {
+    .border {
+        &-#{$Colors} {
+            border-color: $i !important;
+        }
+    }
+}

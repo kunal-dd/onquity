@@ -1,0 +1,26 @@
+
+$color-primary: #1d1a23;
+$color-primary-text: #F4F2FF;
+$color-secondary-text: #B0ACC5;
+$color-secondary-92: #928CA9;
+$color-dark: #100E11;
+$color-blue-58: #583CD5;
+$color-blue-86: #867DFD;
+$color-red-de: #DE0000;
+$color-gradiant-bg: linear-gradient(92.51deg, #77DEC3 1.95%, #8893ED 95.73%);
+$color-gradiant-blue: linear-gradient(178.56deg, #78AEFF -3.65%, #5E9FFF 102.12%);
+$color-gradiant-purple: linear-gradient(177.78deg, #AFA5F9 -13.75%, #867DFD 98.24%);
+
+$Colors: (
+  "primary": $color-primary,
+  "primary-text": $color-primary-text,
+  "secondary-text": $color-secondary-text,
+  "secondary-92": $color-secondary-92,
+  "dark": $color-dark,
+  "blue-58": $color-blue-58,
+  "blue-86": $color-blue-86,
+  "red-de": $color-red-de,
+  "gradiant-bg": $color-gradiant-bg,
+  "gradiant-blue": $color-gradiant-blue,
+  "gradiant-purple": $color-gradiant-purple,
+);

@@ -1,0 +1,25 @@
+.btn:focus {
+    box-shadow: none;
+}
+.onquity-btn{
+    font-size: rem(16px);
+    font-weight: 600;
+    line-height: 21.86px;
+    border-radius: 8px;
+    padding: rem(13px) rem(18px);
+    &.btn-secondary{
+        background-color: #414044;
+        border-color: #414044;
+        color: #f4f2fe80;
+    }
+    &.btn-primary{
+        background-color: $color-blue-58;
+        border-color: $color-blue-58;
+        color: #fff;
+    }
+    &.btn-outlined{
+        background-color: transparent;
+        border-color: #fff;
+        color: $color-primary-text;
+    }
+}
