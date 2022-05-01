@@ -12,7 +12,7 @@
         padding-left: 0;
         color: $color-primary-text;
         font-size: rem(16px);
-        border-color: #837F96;
+        border-color: #8B8B8B;
         &:focus{
             box-shadow: none;
             border-color: $color-primary-text;
@@ -39,7 +39,7 @@
     & .password-icon{
         align-items: flex-end;
         padding-bottom: 1rem;
-        border-color: #837F96 !important;
+        border-color: #8B8B8B !important;
         & svg{
             fill: $color-blue-58;
             opacity: 0.3;

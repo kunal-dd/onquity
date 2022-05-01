@@ -48,7 +48,7 @@ export class UsersService {
 
   public async findByEmailOrMobile(
     email: string,
-    mobile: string,
+    mobile: number,
   ): Promise<boolean> {
     const user = await this.userRepository.find({
       where: [{ email: email }, { mobile_no: mobile }],

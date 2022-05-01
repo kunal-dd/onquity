@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "./../../assets/images/onquity_logo.svg";
 import { Link } from "react-router-dom";
+import images from "../../../assets/images";
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
             <div className="col-5 ps-xl-4">
               <nav className="navbar px-xl-5">
                 <Link className="navbar-brand" to="/">
-                  <img src={Logo} alt="logo" className="header-logo" />
+                  <img src={images.OnquityLogo} alt="logo" className="header-logo" />
                 </Link>
               </nav>
             </div>

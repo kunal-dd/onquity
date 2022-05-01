@@ -33,7 +33,7 @@ export default class User {
   public hashed_refresh_token?: string;
 
   @Column({ name: 'mobile_no', type: 'varchar', default: null })
-  mobile_no: string;
+  mobile_no: number;
 
   @Column({ name: 'password', type: 'varchar', select: false })
   password: string;

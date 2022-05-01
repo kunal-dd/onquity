@@ -8,7 +8,6 @@ import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { MailService } from 'src/mail/mail.service';
-import User from 'src/users/entities/user.entity';
 import { IUsers } from 'src/users/interfaces/user.interface';
 import * as jwt from 'jsonwebtoken';
 

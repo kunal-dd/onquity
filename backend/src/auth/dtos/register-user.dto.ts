@@ -6,6 +6,7 @@ import {
   IsString,
   IsEnum,
   IsOptional,
+  IsNumber,
 } from 'class-validator';
 import { ROLES } from 'src/utils/constant';
 
@@ -16,8 +17,8 @@ export class RegisterUserDto {
   readonly full_name: string;
 
   @ApiProperty()
-  @IsString()
-  readonly mobile_no: string;
+  @IsNumber()
+  readonly mobile_no: number;
 
   @ApiProperty()
   @IsEmail()

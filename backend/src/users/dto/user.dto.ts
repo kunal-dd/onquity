@@ -1,4 +1,4 @@
-import { MaxLength, IsNotEmpty, IsEmail, IsString } from 'class-validator';
+import { MaxLength, IsNotEmpty, IsEmail, IsString, IsNumber } from 'class-validator';
 import { ROLES } from 'src/utils/constant';
 
 export class UserDto {
@@ -6,8 +6,8 @@ export class UserDto {
   @MaxLength(30)
   readonly full_name: string;
 
-  @IsString()
-  readonly mobile_no: string;
+  @IsNumber()
+  readonly mobile_no: number;
 
   @IsEmail()
   readonly email: string;

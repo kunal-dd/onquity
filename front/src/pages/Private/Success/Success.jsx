@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Register = () => {
+const Success = () => {
     return (
         <div>
-            Register
+            Success
         </div>
     )
 }
 
-export default Register
+export default Success
